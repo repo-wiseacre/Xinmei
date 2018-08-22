@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0043)http://10.184.214.177:7005/tw/ENULogin.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Social Login Form</h2>
+<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      
+	  <div class="col" style="background-image:url('./files/in_21.jpg'); background-repeat:no-repeat;background-size:cover;">
+        
+		<input type="text" name="username" placeholder="Customer Id" required>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+		<div class="row">
+			<div class="col">
+				<input type="button" value="Login" onclick=" return fLogon()">
+			</div>
+			<div class="col">	
+				<input type="button" value="Reset" onclick=" return freset()">
+			</div>
+		</div>
+      </div>
+      
+	  
+	  <div class="col">
+        <img src="./files/banner_tai.jpg" width="620" height="155"/>
+      </div>
+	  
+	  <div class="row">
+		<div class="row">
+        <div class="col" colspan="2" align="left" valign="top" width="899">
+		<table width="858" border="0" cellspacing="0" cellpadding="0">
+          <div class="row">
+            <div class="col" width="9" rowspan="3" align="left" valign="bottom"><img src="./files/in_23.jpg" width="9" height="248"></div>
+            <div class="col" width="248" align="left" valign="top"><table width="248" border="0" cellspacing="0" cellpadding="0">
+                <div class="row">
+                  <div class="col" colspan="3" align="left" valign="top">
+				  <table width="248" border="0" cellspacing="0" cellpadding="0">
+                      <div class="row">
+                        <div class="col" width="195" height="28" align="left" valign="middle" background="./files/in_t_bg1.gif"><table width="195" border="0" cellspacing="0" cellpadding="0">
+                          <div class="row">
+                            <div class="col" width="28" align="center" valign="middle"><img src="./files/in_dot01.jpg" width="19" height="19"></div>
+                            <div class="col" width="167" align="left" valign="middle"><p class="title_2"><strong>  Worldwide</strong></p></div>  
+                          </div>
+                        </table></div>
+                        <div class="col" width="53" align="left" valign="top"><a href="http://10.184.214.177:7005/tw/ctcb/eng/LinksMore.html" target="_blank"><img src="./files/in_25.gif" width="53" height="28" border="0"></a></div>
+                      </div>
+                  </table></div>
+                </div>
+                <div class="row">
+                  <div class="col" width="5" align="left" valign="top" background="./files/in_32.gif"><img src="./files/in_32.gif" width="5" height="76"></div>
+                  <div class="col" width="238" align="left" valign="top">
+                  <!--Links-->
+                  <span id="CTCBLinks">                 <table width="238" border="0" cellspacing="0" cellpadding="0">
+                      <div class="row">
+                        <div class="col" colspan="2" align="left" valign="top"><p class="Heading_black">Find the local information in your country</p></div>
+                      </div>
+                      <div class="row">
+                        <div class="col" width="16" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                        <div class="col" width="222" align="left" valign="top" class="in_link"><a href="https://corporate..com/hk/" target="_blank">Hong Kong</a></div>
+                      </div>
+                      <div class="row">
+                        <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                        <div class="col" align="left" valign="top" class="in_link"><a href="https://corporate..com/ny/" target="_blank">United States</a></div> 
+                      </div>
+                      <div class="row">
+                        <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                        <div class="col" align="left" valign="top" class="in_link"><a href="https://netbank..com.vn/" target="_blank">Vietnam</a></div>
+                      </div>
+                  </table></span>
+                  </div>
+                  <div class="col" width="5" align="left" valign="top" background="./files/in_34.gif"><img src="./files/in_34.gif" width="5" height="76"></div>
+                </div>
+                <div class="row">
+                  <div class="col" colspan="3" align="left" valign="top"><img src="./files/in_44.gif" width="248" height="5"></div>
+                </div>
+            </table></div>
+            <div class="col" width="12" align="left" valign="top">&nbsp;&nbsp;&nbsp; &nbsp;</div>                                     
+            <div class="col" width="311" align="left" valign="top"><table width="311" border="0" cellspacing="0" cellpadding="0">
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><table width="311" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" width="258" align="left" valign="middle" background="./files/in_t_bg2.gif"><table width="258" border="0" cellspacing="0" cellpadding="0">
+                        <div class="row">
+                          <div class="col" width="28" align="center" valign="middle"><img src="./files/in_dot02.jpg" width="19" height="19"></div>
+                          <div class="col" width="230" align="left" valign="middle"><p class="title_2"><strong>News</strong></p></div>
+                        </div>
+                      </table></div>
+                      <div class="col" width="53" align="left" valign="top"><a href="http://10.184.214.177:7005/tw/ctcb/eng/NewsMore.html" target="_blank"><img src="./files/in_25.gif" width="53" height="28" border="0"></a></div>
+                    </div>
+                </table></div>
+              </div>
+              <div class="row">
+                <div class="col" width="5" align="left" valign="top" background="./files/in_32.gif"><img src="./files/in_32.gif" width="5" height="76"></div>
+                <div class="col" width="301" align="left" valign="top">
+                <!--News-->
+                <span id="newsfile">            <table width="301" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" width="18" height="18" align="center" valign="top"><img src="./files/in_39.gif" width="15" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><span class="newsDate">2010/06/14</span> <a href="https://netbank..com/news.htm" target="_blank">Mask rule of A/C No. change to...</a></div> 
+                    </div> 
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/in_39.gif" width="15" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><span class="newsDate">2010/04/20</span> <a href="https://netbank..com/news.htm" target="_blank">Remittance(TWD) upper limit change...</a></div> 
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/in_39.gif" width="15" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><span class="newsDate">2009/10/26</span> <a href="https://netbank..com/news.htm" target="_blank">eTrust TW platform is launched on 10/26...</a></div> 
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/in_39.gif" width="15" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><span class="newsDate">2009/10/26</span> <a href="https://netbank..com/news.htm" target="_blank">New CA/Token/IKey Fees Announced ...</a></div> 
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/in_39.gif" width="15" height="15"></div>
+                      <div class="col" align="left" valign="top"><span class="newsDate">2009/07/06</span> <span class="in_link"><a href="https://netbank..com/news.htm" target="_blank">Corp. Netbanking is fomally named <b><font color="#0000FF">eTrust</font></b>...</a></span></div> 
+                    </div>                   
+                </table></span>
+
+                </div>
+                <div class="col" width="5" align="left" valign="top" background="./files/in_34.gif"><img src="./files/in_34.gif" width="5" height="76"></div>
+              </div>
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><img src="./files/in_48.jpg" width="311" height="5"></div>
+              </div>
+            </table></div>
+            <div class="col" width="14" align="left" valign="top">&nbsp;&nbsp;&nbsp; &nbsp;</div>                                      
+            <div class="col" width="285" rowspan="3" align="left" valign="top"><table width="285" border="0" cellspacing="0" cellpadding="0">
+              <div class="row">
+                <div class="col" height="28" colspan="3" align="left" valign="middle" background="./files/in_t_bg3.gif"><table width="258" border="0" cellspacing="0" cellpadding="0">
+                  <div class="row">
+                    <div class="col" width="28" align="center" valign="middle"><img src="./files/in_dot03.jpg" width="19" height="19"></div>
+                    <div class="col" width="174" align="left" valign="middle"><p class="title_2"><strong>Contact Us</strong></p></div>        
+                    <div class="col" width="52" align="right" valign="middle"><p class="title_2"><strong><a href="http://10.184.214.177:7005/tw/ctcb/eng/UseSecurity.html" target="_blank">Security</a></strong></p></div>                                                                                                     
+                  </div>
+                </table></div>
+              </div>
+              <div class="row">
+                <div class="col" width="5" align="center" valign="top" background="./files/in_32.gif"><img src="./files/in_36.jpg" width="5" height="95"></div>
+                <div class="col" width="275" align="center" valign="top">
+                <!--Contact Us-->
+                 <span id="ContactUS"><table width="275" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" width="50" align="left" valign="top"><img src="./files/in_37.gif" width="45" height="55"></div>
+                      <div class="col" width="225" align="left" valign="middle">For further information about our products <br> 
+                        and services,please contact us at : <br> 
+                        <a href="mailto:ba.tw.callcenter@.com.tw">ba.tw.callcenter@.com.tw</a></div>
+                    </div>
+                    <div class="row">
+                      <div class="col" colspan="2" align="left" valign="middle" class="Heading_black">Customer Service Hotline</div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col" colspan="2" align="left" valign="top"><table width="275" border="0" cellspacing="0" cellpadding="0">
+                        <div class="row">
+                          <div class="col" height="10" align="left" valign="top">&nbsp;</div>
+                          <div class="col" align="left" valign="top">Phone:0800-017-888 or (886) 2-2555-1380 EXT:5770&nbsp;</div>
+                        </div>
+                        <div class="row">
+                          <div class="col" height="10" align="left" valign="top">&nbsp;</div>
+                          <div class="col" align="left" valign="top">Fax:(886)2-25592123</div>
+                        </div>
+                        <div class="row">
+                          <div class="col" width="10" height="10" align="left" valign="top">&nbsp;</div>
+                          <div class="col" width="265" align="left" valign="top">1F., No.3, Songshou Rd., Sinyi District, Taipei City 110, Taiwan</div>                                                                                                                        
+                        </div>
+                      </table></div>
+                    </div>
+                </table></span>
+                
+                </div>
+                <div class="col" width="5" align="center" valign="top" background="./files/in_34.gif"><img src="./files/in_34.gif" width="5" height="10"></div>
+              </div>
+              <div class="row">
+                <div class="col" colspan="3" align="center" valign="top"><img src="./files/in_68.jpg" width="285" height="5"></div>
+              </div>
+              <div class="row"><div class="col" align="left" valign="top"></div>
+            
+            </div></table></div>
+          </div>
+          <div class="row">
+            <div class="col" colspan="4" align="left" valign="top"><img src="./files/in_45.jpg" width="248" height="9"></div>
+          </div>
+          <div class="row">
+            <div class="col" align="left" valign="top"><table width="248" border="0" cellspacing="0" cellpadding="0">
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><table width="248" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" width="195" align="left" valign="middle" background="./files/in_t_bg1.gif"><table width="195" border="0" cellspacing="0" cellpadding="0">
+                        <div class="row">
+                          <div class="col" width="28" align="center" valign="middle"><img src="./files/in_dot04.jpg" width="19" height="19"></div>
+                          <div class="col" width="167" align="left" valign="middle"><p class="title_2"><strong>Download Center</strong></p></div>                     
+                        </div>
+                      </table></div>
+                      <div class="col" width="53" align="left" valign="top"><a href="http://10.184.214.177:7005/tw/ctcb/eng/DownloadMore.html" target="_blank"><img src="./files/in_25.gif" width="53" height="28" border="0"></a></div>
+                    </div>
+                </table></div>
+              </div>
+              <div class="row">
+                <div class="col" width="5" height="97" align="left" valign="top" background="./files/in_32.gif"><img src="./files/in_32.gif" width="5" height="76"></div>
+                <div class="col" width="238" align="left" valign="top">
+                <!--DownloadCenter-->
+                <span id="DWCenter">               <table width="238" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" colspan="2" align="left" valign="top" class="Heading_black">Please click on the categories below to go directly to the relevant section</div>
+                    </div>
+                    <div class="row">
+                      <div class="col" width="16" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" width="222" align="left" valign="top" class="in_link"><a href="http://www..com.tw/enterprise/e/e_03.htm" target="_blank">Account  Services Forms</a></div> 
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><a href="http://www..com.tw/enterprise/e/e_03.htm" target="_blank">Net Banking Aqreement</a></div>  
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><a href="http://www..com.tw/enterprise/e/e_03.htm" target="_blank">Trade Services Forms</a></div>                       
+                    </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><a href="http://pki..com/RAWeb/CAdownload.jsp?language=en-us" target="_blank">Download CA Component</a></div> 
+                    </div>                      
+                </table></span>
+
+                </div>
+                <div class="col" width="5" align="left" valign="top" background="./files/in_34.gif"><img src="./files/in_34.gif" width="5" height="76"></div>
+              </div>
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><img src="./files/in_44.gif" width="248" height="5"></div>
+              </div>
+            </table></div>
+            <div class="col" align="left" valign="top">&nbsp;</div>
+            <div class="col" align="left" valign="top"><table width="311" border="0" cellspacing="0" cellpadding="0">
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><table width="311" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" width="258" align="left" valign="middle" background="./files/in_t_bg2.gif"><table width="258" border="0" cellspacing="0" cellpadding="0">
+                        <div class="row">
+                          <div class="col" width="24" align="center" valign="middle"><img src="./files/in_dot05.jpg" width="19" height="19"></div>
+                          <div class="col" width="234" align="left" valign="middle"><p class="title_2 style2"><strong>Products and Services</strong></p></div>                                                                                                             
+                        </div>
+                      </table></div>
+                      <div class="col" width="53" align="left" valign="top"><a href="http://10.184.214.177:7005/tw/ctcb/eng/ProductMore.html" target="_blank"><img src="./files/in_25.gif" width="53" height="28" border="0"></a></div>
+                    </div>
+                </table></div>
+              </div>
+              <div class="row">
+                <div class="col" width="5" height="97" align="left" valign="top" background="./files/in_32.gif"><img src="./files/in_32.gif" width="5" height="76"></div>
+                <div class="col" width="301" align="left" valign="top">
+                <!--Product-->
+                <span id="Product">              <table width="301" border="0" cellspacing="0" cellpadding="0">
+                    <div class="row">
+                      <div class="col" colspan="2" align="left" valign="top" class="Heading_black">Cash Management</div>
+                      </div>
+                    <div class="row">
+                      <div class="col" width="18" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" width="283" align="left" valign="top" class="in_link"><a href="http://www..com.tw/enterprise/index.htm" target="_blank">Account Services</a></div> 
+                    </div>
+                    <div class="row">
+                      <div class="col" colspan="2" align="left" valign="top" class="Heading_black">Trade Finance</div>
+                      </div>
+                    <div class="row">
+                      <div class="col" height="18" align="center" valign="top"><img src="./files/dot_p1.jpg" width="13" height="15"></div>
+                      <div class="col" align="left" valign="top" class="in_link"><a href="http://www..com.tw/enterprise/index.htm" target="_blank">Export and import L/C  negotiation</a></div> 
+                    </div>
+                </table></span>
+
+                </div>
+                <div class="col" width="5" align="left" valign="top" background="./files/in_34.gif"><img src="./files/in_34.gif" width="5" height="76"></div>
+              </div>
+              <div class="row">
+                <div class="col" colspan="3" align="left" valign="top"><img src="./files/in_48.jpg" width="311" height="5"></div>
+              </div>
+            </table></div>
+            <div class="col" align="left" valign="top">&nbsp;</div>
+          </div>
+          <div class="row">
+            <div class="col" colspan="6" align="left" valign="top"><img src="./files/in_54.gif" width="858" height="32"></div>
+          </div>
+        </table></div>
+        </div>
+		
+		
+	  </div>
+	  
+	  
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col"
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col"
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
